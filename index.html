@@ -1,0 +1,88 @@
+<html>
+<head>
+<title> EVALUACION DE PROGRAMACION</title>
+<script>
+function resultado() {
+  var p1, p2, p3, p4, p5, nota
+
+  <!-- 1ª pregunta -->
+  if (document.getElementById('p11').checked==true) {p1=1}
+  else {p1=0}
+  <!-- 2ª pregunta -->
+  if (document.getElementById('p22').checked==true) {p2=1}
+  else {p2=0}
+  <!-- 3ª pregunta -->
+  if (document.getElementById('p33').checked==true) {p3=1}
+  else {p3=0}
+  <!-- 4ª pregunta -->
+  if (document.getElementById('p44').checked==true) {p4=1}
+  else {p4=0}
+  <!-- 5ª pregunta -->
+  if(document.getElementById(p55).checked==true) {p5=1}
+  else {p5=0}
+  <!-- 6ª pregunta -->
+  if(document.getElementById(p55).checked==true) {p5=1}
+  else {p6=0}
+  <!-- 7ª pregunta -->
+  if(document.getElementById(p55).checked==true) {p5=1}
+  else {p7=0}
+  <!-- 8ª pregunta -->
+  if(document.getElementById(p55).checked==true) {p5=1}
+  else {p8=0}
+  <!-- 9ª pregunta -->
+  if(document.getElementById(p55).checked==true) {p5=1}
+  else {p9=0}
+  <!-- 10ª pregunta -->
+  if(document.getElementById(p55).checked==true) {p5=1}
+  else {p10=0}
+
+  nota=p1+p2+p3+p4+p5+p6+p7+p8+p9+p10;
+  alert(" Aciertos: " + nota);
+  location.reload();
+}
+</script>
+</head>
+<body>
+<h2>T E S T</h2>
+<hr>
+<form style="font:normal 16px sans-serif">
+<p>QUE ES INT... La respuesta es A.</p>
+<p onclick="this.style.color='#00FF00'"><input type="radio" name="pregunta1" id="p11"> UN ENTERO A.</p>
+<p onclick="this.style.color='#FF0000'"><input type="radio" name="pregunta1" id="p12"> UN FLOTANTE B.</p>
+<p onclick="this.style.color='#FF0000'"><input type="radio" name="pregunta1" id="p13"> BOOLEAN C.</p>
+<p onclick="this.style.color='#FF0000'"><input type="radio" name="pregunta1" id="p14"> TODAS LAS ANTERIORES D.</p>
+
+<p>CUAL ES UN CARACTER... La respuesta es B.</p>
+<p onclick="this.style.color='#FF0000'"><input type="radio" name="pregunta2" id="p21"> FLOAT A.</p>
+<p onclick="this.style.color='#00FF00'"><input type="radio" name="pregunta2" id="p22"> CHAR B.</p>
+<p onclick="this.style.color='#FF0000'"><input type="radio" name="pregunta2" id="p23"> DOULE C.</p>
+<p onclick="this.style.color='#FF0000'"><input type="radio" name="pregunta2" id="p24"> TODAS LAS ANTERIORES D.</p>
+
+<p>QUE SIGNIFICA LA POOtercera pregunta del test... La respuesta es C.</p>
+<p onclick="this.style.color='#FF0000'"><input type="radio" name="pregunta3" id="p31"> PROGRAMACION ORIENTADO A MAQUINAS A.</p>
+<p onclick="this.style.color='#FF0000'"><input type="radio" name="pregunta3" id="p32"> PROGRAMACION A OBJETOS OCULTOS B.</p>
+<p onclick="this.style.color='#00FF00'"><input type="radio" name="pregunta3" id="p33"> PROGRAMACION ORIENTADO EN OBJETOS C.</p>
+<p onclick="this.style.color='#FF0000'"><input type="radio" name="pregunta3" id="p34"> TODAS LAS ANTERIORES D.</p>
+
+<p>QUE ES ARRAY... La respuesta es D.</p>
+<p onclick="this.style.color='#FF0000'"><input type="radio" name="pregunta4" id="p41"> CREA UN OBJETO A.</p>
+<p onclick="this.style.color='#FF0000'"><input type="radio" name="pregunta4" id="p42"> ES QUE VALIDA LOS DATOS B.</p>
+<p onclick="this.style.color='#FF0000'"><input type="radio" name="pregunta4" id="p43"> PERMITE CREAR DATOS C.</p>
+<p onclick="this.style.color='#00FF00'"><input type="radio" name="pregunta4" id="p44"> ES UNA ESTRUCTURA QUE ALMACENA DATOS D.</p>
+
+<p>Los principales tipos de datos son:  ....La respuesta es A.</p>
+<p onclick="this.style.color='#00FF00'"><input type="radio" name="pregunta5" id="p51"> De tipo entero, reales, caracteres, logicos</p>
+<p onclick="this.style.color='#FF0000'"><input type="radio" name="pregunta5" id="p52"> De tipo numericos y alfabeticos</p>
+<p onclick="this.style.color='#FF0000'"><input type="radio" name="pregunta5" id="p53"> Solo alfanumericos</p>
+<p onclick="this.style.color='#FF0000'"><input type="radio" name="pregunta5" id="p54"> Solo simbolos</p>
+
+<p>  ....La respuesta es A.</p>
+<p onclick="this.style.color='#00FF00'"><input type="radio" name="pregunta5" id="p51"> De tipo entero, reales, caracteres, logicos</p>
+<p onclick="this.style.color='#FF0000'"><input type="radio" name="pregunta5" id="p52"> De tipo numericos y alfabeticos</p>
+<p onclick="this.style.color='#FF0000'"><input type="radio" name="pregunta5" id="p53"> Solo alfanumericos</p>
+<p onclick="this.style.color='#FF0000'"><input type="radio" name="pregunta5" id="p54"> Solo simbolos</p>
+<hr>
+<p><input type="button" value=" R E S U L T A D O " onclick="resultado()"/></p>
+</form>
+</body>
+</html>

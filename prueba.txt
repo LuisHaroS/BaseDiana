@@ -1,0 +1,71 @@
+insert into medico
+values ('100','alexis','haro','M','3068129','quito',25,'cardiologo',120000);
+insert into medico
+values ('100','alexis','haro','M','3068129','quito',25,'cardiologo',1,200.00);
+insert into medico
+values ('1234','alexis','haro','M','3068129','quito',25,'cardiologo',1,200.00);
+insert into MEDICO
+values ('200','Ginger','Puente','F','3068129','quito',25,'cardiologo',1200.00);
+insert into MEDICO
+values ('300','Ginger','Puente','F','3068129','quito',25,'cardiologo',1200.00);
+insert into MEDICO
+values ('4321','Lupita','Sanchez','F','08213544','Sangolqui',NULL,NULL,NULL);
+insert into MEDICO(MED_MATRICULA,MED_NOMBRE,MED_APELLIDO,MED_TELEFONO,MED_CIUDAD)
+values ('4444','Juan','Proaño','M','0954782135','Quito');
+insert into MEDICO(MED_MATRICULA,MED_NOMBRE,MED_APELLIDO,MED_TELEFONO,MED_CIUDAD)
+values ('444','Juan','Proaño','M','0954782135','Quito');
+insert into MEDICO(MED_MATRICULA,MED_NOMBRE,MED_APELLIDO,MED_TELEFONO,MED_CIUDAD)
+values ('4444','Juan','Proaño','M','0954782135','Quito');
+insert into MEDICO(MED_MATRICULA,MED_NOMBRE,MED_APELLIDO,MED_SEXO,MED_TELEFONO,MED_CIUDAD)
+values ('4444','Juan','Proaño','M','0954782135','Quito');
+insert into MEDICO
+values ('200','Alejandro','Perez','M','021254684','quito',25,'Enfermero',1200.00);
+insert into CLINICA(CLI_RUC,CLI_NOMBRE,CLI_CAPACIDAD,CLI_COSTO_DIA,CLI_CATEGORIA,CLI_DIRECCION,CLI_CIUDAD)
+values ('13465789211','Benito Juanes',300,21,NULL,'San Bartolo','Quito');
+insert into CLINICA
+values ('15526910061','San Juan de Dios',300,25,NULL,'29 de Marzo','Guayaquil')
+;
+insert into PACIENTE
+values ('111','17126800165','1245','Andres','Amagua','1995-12-06','2018-11-20',NULL,'Amaguaña','Quito','0987827459','M','Sobredosis')
+;
+insert into PACIENTE(PAC_CODIGO;CLI_RUC,MED_MATRICULA,PAC_NOMBRE,PAC_APELLIDO,PAC_FECHA_NAC,PAC_FECHA_INGRESO,PAC_FECHA_SALIDA,PAC_DIRECCION,PAC_CIUDAD,PAC_TELEFONO,PAC_SEXO,PAC_DIAGNOSTICO)
+values ('111','17126800165','1245','Andres','Amagua','1995-12-06','2018-11-20',NULL,'Amaguaña','Quito','0987827459','M','Sobredosis')
+;
+insert into PACIENTE(PAC_CODIGO,CLI_RUC,MED_MATRICULA,PAC_NOMBRE,PAC_APELLIDO,PAC_FECHA_NAC,PAC_FECHA_INGRESO,PAC_FECHA_SALIDA,PAC_DIRECCION,PAC_CIUDAD,PAC_TELEFONO,PAC_SEXO,PAC_DIAGNOSTICO)
+values ('111','17126800165','1245','Andres','Amagua','1995-12-06','2018-11-20',NULL,'Amaguaña','Quito','0987827459','M','Sobredosis')
+;
+insert into PACIENTE(PAC_CODIGO,CLI_RUC,MED_MATRICULA,PAC_NOMBRE,PAC_APELLIDO,PAC_FECHA_NAC,PAC_FECHA_INGRESO,PAC_FECHA_SALIDA,PAC_DIRECCION,PAC_CIUDAD,PAC_TELEFONO,PAC_SEXO,PAC_DIAGNOSTICO)
+values ('111',NULL,'1245','Andres','Amagua','1995-12-06','2018-11-20',NULL,'Amaguaña','Quito','0987827459','M','Sobredosis')
+;
+insert into PACIENTE(PAC_CODIGO,CLI_RUC,MED_MATRICULA,PAC_NOMBRE,PAC_APELLIDO,PAC_FECHA_NAC,PAC_FECHA_INGRESO,PAC_FECHA_SALIDA,PAC_DIRECCION,PAC_CIUDAD,PAC_TELEFONO,PAC_SEXO,PAC_DIAGNOSTICO)
+values ('111',NULL,'100','Andres','Amagua','1995-12-06','2018-11-20',NULL,'Amaguaña','Quito','0987827459','M','Sobredosis')
+;
+insert into PACIENTE
+values ('112','1234578900050','200','Carlos','Andino','1998-04-30','2017-11-20','2018-01-01','Armenia','Quito','0996921645','M','Gripe Porcina')
+;
+insert into MEDICO
+values ('4000','Juan','Davalos','M','099111','Sangolqui',NULL,'Cardiologo','50000')
+;
+insert into CLINICA
+values ('0123456789','Super Buena',100,'200.50',NULL,'10 DE AGOSTO Y ORELLANA','Quito')
+;
+insert into PACIENTE
+values ('113','123457900050','4000','Ana','Andrade','1980-01-05',today(),NULL,NULL,'Sangolqui','099111','F',NULL)
+;
+insert into PACIENTE
+values ('113','0123456789','4000','Ana','Andrade','1980-01-05',today(),NULL,NULL,'Sangolqui','099111','F',NULL)
+;------------------ borrar ---------------
+DELETE FROM MEDICO
+WHERE MED_NOMBRE LIKE 'GHHH' AND MED_APELLIDO LIKE 'HKKK';
+DELETE FROM MEDICO
+WHERE MED_NOMBRE LIKE 'ghhh' AND MED_APELLIDO LIKE 'hkkk';
+DELETE FROM MEDICO
+WHERE MED_NOMBRE LIKE 'juan' AND MED_APELLIDO LIKE 'davalos';
+insert into MEDICO
+values ('4000','Juan','Davalos','M','099111','Sangolqui',NULL,'Cardiologo','50000')
+----------------BORARR MEDICO ----------------------------------
+DELETE FROM MEDICO
+WHERE  MED_NOMBRE LIKE 'GHHH' AND MED_APELLIDO LIKE 'HKKK'
+---------------------------BORRAR PACIENTE ------------------------
+DELETE FROM PACIENTE
+WHERE MED_MATRICULA=(SELECT MED_MATRICULA FROM MEDICO  WHERE MED_NOMBRE LIKE 'GHHH' AND MED_APELLIDO LIKE 'HKKK')
